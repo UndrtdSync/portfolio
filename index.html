@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joshua Alvarez — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <strong>JA<span class="neon">.dev</span></strong>
+    <div>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="grid-bg"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <img src="profile.svg" alt="Profile photo of Joshua" class="profile-pic fade-up" />
+    <h1 class="fade-up">Hi, I'm <span class="neon">Joshua Alvarez</span> ⚡</h1>
+    <p class="subtitle fade-up delay-1">IT Student & Front-End Developer building <span class="typing" id="typing"></span><span class="caret">|</span></p>
+    <div class="buttons fade-up delay-2">
+      <a class="btn primary" href="#projects">View Projects</a>
+      <a class="btn ghost" href="#contact">Contact Me</a>
+    </div>
+    <a href="#about" class="scroll-hint">↓</a>
+  </header>
+
+  <section id="about" class="reveal">
+    <h2><span class="neon">01.</span> About Me</h2>
+    <p>I'm Joshua, a 2nd-year IT student from the Philippines. I love turning ideas into fast, clean websites. Currently focused on HTML, CSS, JavaScript and learning Next.js + Vercel deployment. I enjoy UI with neon / dark themes.</p>
+    <ul class="skills">
+      <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Python</li><li>Git & GitHub</li><li>Next.js</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="reveal">
+    <h2><span class="neon">02.</span> Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="tag">Python</div>
+        <h3>Smart Student Ranking</h3>
+        <p>Auto-ranks students by scores with search + export to CSV.</p>
+        <a href="https://github.com/">View on GitHub →</a>
+      </div>
+      <div class="card">
+        <div class="tag">Web Concept</div>
+        <h3>Floorplan Viewer</h3>
+        <p>Concept for viewing DXF floorplans directly in the browser.</p>
+        <a href="https://github.com/">Live Demo →</a>
+      </div>
+      <div class="card">
+        <div class="tag">JavaScript</div>
+        <h3>Neon Todo App</h3>
+        <p>Dark + neon-blue todo app with localStorage and filters.</p>
+        <a href="https://github.com/">Live Demo →</a>
+      </div>
+      <div class="card">
+        <div class="tag">Vercel</div>
+        <h3>Portfolio v1</h3>
+        <p>This site — black & neon-blue theme, deployed free on Vercel.</p>
+        <a href="https://github.com/">Source →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="reveal">
+    <h2><span class="neon">03.</span> Contact</h2>
+    <p>Want to work together or hire me for a project? My inbox is open.</p>
+    <div class="buttons left">
+      <a class="btn primary" href="mailto:hello@example.com">Say Hello</a>
+      <a class="btn ghost" href="#">Download Resume</a>
+    </div>
+    <p class="socials">
+      <a href="https://github.com/">GitHub</a> ·
+      <a href="https://linkedin.com/">LinkedIn</a> ·
+      <a href="mailto:hello@example.com">hello@example.com</a>
+    </p>
+  </section>
+
+  <footer>© 2026 Joshua Alvarez — Black & Neon Blue • Deployed on Vercel</footer>
+  <script src="script.js"></script>
+</body>
+</html>
