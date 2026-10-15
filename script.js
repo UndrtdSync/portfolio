@@ -7,7 +7,7 @@ const io = new IntersectionObserver((entries) => {
       io.unobserve(e.target);
     }
   });
-}, { threshold: 0.15 });
+}, { threshold: 0.12 });
 reveals.forEach(el => io.observe(el));
 
 // Nav shadow on scroll
@@ -15,6 +15,14 @@ const nav = document.querySelector('nav');
 addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', scrollY > 10);
 });
+
+// Mobile menu
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', () => navLinks.classList.remove('open'))
+);
 
 // Typing effect
 const words = ['clean, fast websites.', 'modern portfolios.', 'ideas into reality.'];

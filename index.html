@@ -3,26 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Joshua Alvarez — Personal Portfolio: About, Skills, Projects, Achievements, Contact. Custom HTML5/CSS/JS, black and neon blue theme." />
   <title>Joshua Alvarez — Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <nav>
     <strong>JA<span class="neon">.dev</span></strong>
-    <div>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
       <a href="#about">About</a>
+      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 
-  <header class="hero">
+  <!-- 1. HOME -->
+  <header class="hero" id="home">
     <div class="grid-bg"></div>
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
-    <img src="profile.svg" alt="Profile photo of Joshua" class="profile-pic fade-up" />
+    <img src="profile.svg" alt="Professional profile picture of Joshua Alvarez" class="profile-pic fade-up" />
+    <p class="welcome fade-up">Welcome to my portfolio! 👋</p>
     <h1 class="fade-up">Hi, I'm <span class="neon">Joshua Alvarez</span> ⚡</h1>
     <p class="subtitle fade-up delay-1">IT Student & Front-End Developer building <span class="typing" id="typing"></span><span class="caret">|</span></p>
+    <p class="subtitle fade-up delay-1">I turn school ideas into fast, clean websites with HTML5, CSS3 and JavaScript.</p>
     <div class="buttons fade-up delay-2">
       <a class="btn primary" href="#projects">View Projects</a>
       <a class="btn ghost" href="#contact">Contact Me</a>
@@ -30,59 +38,101 @@
     <a href="#about" class="scroll-hint">↓</a>
   </header>
 
+  <!-- 2. ABOUT ME -->
   <section id="about" class="reveal">
     <h2><span class="neon">01.</span> About Me</h2>
-    <p>I'm Joshua, a 2nd-year IT student from the Philippines. I love turning ideas into fast, clean websites. Currently focused on HTML, CSS, JavaScript and learning Next.js + Vercel deployment. I enjoy UI with neon / dark themes.</p>
+    <p><strong>Personal introduction:</strong> I'm Joshua, a 2nd-year IT student from the Philippines. I love turning ideas into fast, clean websites and learning how real deployment works with GitHub + Vercel.</p>
+    <div class="edu-card" style="margin-top:1rem">
+      <img src="school-logo.png" alt="School logo" class="school-logo" onerror="this.style.display='none'" />
+      <div>
+        <h3>Sample State University — BS Information Technology</h3>
+        <p class="muted">2nd Year • 2024 - Present</p>
+        <p>Focused on web development fundamentals and UI design.</p>
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="tag">Interests & Hobbies</div>
+        <p>🎮 Gaming • 🎨 UI design • 💻 Coding • 📷 Photography • 🏀 Basketball</p>
+      </div>
+      <div class="card">
+        <div class="tag">Goals</div>
+        <p>Become a front-end developer, finish Next.js, and freelance while in school.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SKILLS -->
+  <section id="skills" class="reveal">
+    <h2><span class="neon">02.</span> Skills</h2>
+    <h3 class="sub">Technical skills</h3>
     <ul class="skills">
-      <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Python</li><li>Git & GitHub</li><li>Next.js</li>
+      <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Python</li><li>Next.js (learning)</li>
+    </ul>
+    <h3 class="sub">Computer-related skills</h3>
+    <ul class="skills">
+      <li>Git & GitHub</li><li>Vercel Deployment</li><li>VS Code</li><li>MS Office</li><li>Basic Networking</li>
+    </ul>
+    <h3 class="sub">Other skills</h3>
+    <ul class="skills">
+      <li>Teamwork</li><li>Time Management</li><li>Basic Photo Editing</li>
     </ul>
   </section>
 
+  <!-- 4. PROJECTS -->
   <section id="projects" class="reveal">
-    <h2><span class="neon">02.</span> Projects</h2>
+    <h2><span class="neon">03.</span> Projects & Activities</h2>
     <div class="grid">
       <div class="card">
-        <div class="tag">Python</div>
+        <img src="project1.png" alt="Screenshot of Smart Student Ranking project" class="proj-img" onerror="this.style.display='none'" />
+        <div class="tag">School Project • Python</div>
         <h3>Smart Student Ranking</h3>
-        <p>Auto-ranks students by scores with search + export to CSV.</p>
+        <p>Auto-ranks students by scores with search + export to CSV. My class activity project.</p>
         <a href="https://github.com/">View on GitHub →</a>
       </div>
       <div class="card">
-        <div class="tag">Web Concept</div>
-        <h3>Floorplan Viewer</h3>
+        <img src="project2.png" alt="Screenshot of Floorplan Viewer concept" class="proj-img" onerror="this.style.display='none'" />
+        <div class="tag">Personal Work • Web</div>
+        <h3>Floorplan Viewer Concept</h3>
         <p>Concept for viewing DXF floorplans directly in the browser.</p>
         <a href="https://github.com/">Live Demo →</a>
       </div>
       <div class="card">
-        <div class="tag">JavaScript</div>
+        <img src="project3.png" alt="Screenshot of Neon Todo App" class="proj-img" onerror="this.style.display='none'" />
+        <div class="tag">Personal Work • JavaScript</div>
         <h3>Neon Todo App</h3>
-        <p>Dark + neon-blue todo app with localStorage and filters.</p>
+        <p>Dark + neon-blue todo app with localStorage, filters and animations.</p>
         <a href="https://github.com/">Live Demo →</a>
-      </div>
-      <div class="card">
-        <div class="tag">Vercel</div>
-        <h3>Portfolio v1</h3>
-        <p>This site — black & neon-blue theme, deployed free on Vercel.</p>
-        <a href="https://github.com/">Source →</a>
       </div>
     </div>
   </section>
 
+  <!-- 5. ACHIEVEMENTS -->
+  <section id="achievements" class="reveal">
+    <h2><span class="neon">04.</span> Achievements</h2>
+    <div class="grid">
+      <div class="card"><div class="tag">2025</div><h3>Dean's Lister</h3><p>Academic recognition for 1st semester, 2nd year.</p></div>
+      <div class="card"><div class="tag">Milestone</div><h3>First Live Website</h3><p>Deployed this portfolio to Vercel with GitHub integration.</p></div>
+      <div class="card"><div class="tag">Certificate</div><h3>HTML & CSS Basics</h3><p>Completed free online course + built 3 practice pages. Replace with your real certificate.</p></div>
+    </div>
+  </section>
+
+  <!-- 6. CONTACT -->
   <section id="contact" class="reveal">
-    <h2><span class="neon">03.</span> Contact</h2>
-    <p>Want to work together or hire me for a project? My inbox is open.</p>
+    <h2><span class="neon">05.</span> Contact</h2>
+    <p>Want to work together or ask about my school projects? My inbox is open.</p>
     <div class="buttons left">
-      <a class="btn primary" href="mailto:hello@example.com">Say Hello</a>
+      <a class="btn primary" href="mailto:joshua.alvarez@example.com">Say Hello</a>
       <a class="btn ghost" href="#">Download Resume</a>
     </div>
     <p class="socials">
+      <a href="mailto:joshua.alvarez@example.com">joshua.alvarez@example.com</a> ·
       <a href="https://github.com/">GitHub</a> ·
-      <a href="https://linkedin.com/">LinkedIn</a> ·
-      <a href="mailto:hello@example.com">hello@example.com</a>
+      <a href="https://linkedin.com/">LinkedIn</a>
     </p>
   </section>
 
-  <footer>© 2026 Joshua Alvarez — Black & Neon Blue • Deployed on Vercel</footer>
+  <footer>© 2026 Joshua Alvarez — Custom HTML5/CSS/JS • Black & Neon Blue • Template: none (custom-built) • Hosted on Vercel</footer>
   <script src="script.js"></script>
 </body>
 </html>
